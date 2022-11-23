@@ -24,7 +24,16 @@ void draw ()
 {
   if ( noNowReallyStart==true ) {
     background (0); //Night Mode not considered yet
-    if () {} else {} //End Quit Button Color
+    //
+    //Hover Over Feature
+    println("X-value", quitButtonX, quitButtonY+quitButtonWidth );
+    print("Y-value", quitButtonY, quitButtonY+quitButtonHeight);
+    /*
+    if () {
+    quitButtonColor = yellow:
+  } else {
+    quitButtonColor = purple;
+  } //End Quit Button Color
     fill(quitButtonColor);
     rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button With Hoverover
   }
