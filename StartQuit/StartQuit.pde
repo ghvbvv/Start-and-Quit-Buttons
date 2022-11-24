@@ -2,11 +2,12 @@
 int appWidth, appHeight;
 Boolean start=false, noNowReallyStart=false;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+color quitButtonColor, yellow=#FFFF00 , purple=#FF00FF ;
 //
 void setup() 
 {
   //Display & Orientation Algorithms not consider yet 
-  size(400, 300);
+  size(1000, 800);
   //fulScreen(); //displayWidth, displayHeight
   appWidth = width;
   appHeight = height;
@@ -26,14 +27,16 @@ void draw ()
     background (0); //Night Mode not considered yet
     //
     //Hover Over Feature
-    println("X-value", quitButtonX, quitButtonY+quitButtonWidth );
-    print("Y-value", quitButtonY, quitButtonY+quitButtonHeight);
-    /*
-    if () {
-    quitButtonColor = yellow:
+    println("X-value", quitButtonX, mouseX ,quitButtonX+quitButtonWidth );
+    println("Y-value", quitButtonY, mouseY ,quitButtonY+quitButtonHeight);
+    //
+    //Quit Button Hover Over Feature
+    if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
+    quitButtonColor = yellow; //Remember night Mode
   } else {
-    quitButtonColor = purple;
+    quitButtonColor = purple; //Remember Day Mode
   } //End Quit Button Color
+  //
     fill(quitButtonColor);
     rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight ); //Quit Button With Hoverover
   }
@@ -56,6 +59,9 @@ void mousePressed ()
   //OS level Start Button
   start = true;
   println("TO Start, Press the Space Bar");
+  //
+  //Quit Button: Logical Rectangle, see println in draw()
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
   //
 } //End mousePressed
 //
