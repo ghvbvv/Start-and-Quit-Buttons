@@ -44,9 +44,6 @@ void mousePressed ()
   //Quit Button: Logical Rectangle, see println in draw()
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
   //
-  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
-    
-  } else {}
 } //End mousePressed
 //
 //End main program
