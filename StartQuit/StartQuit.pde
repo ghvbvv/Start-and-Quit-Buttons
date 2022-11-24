@@ -12,7 +12,8 @@ void setup()
   appWidth = width;
   appHeight = height;
   //
-  population(); 
+  population();
+  //
 } //End setup
 //
 void draw () 
