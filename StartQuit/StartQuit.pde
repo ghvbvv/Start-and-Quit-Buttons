@@ -6,7 +6,7 @@ color quitButtonColor, yellow=#FFFF00 , purple=#FF00FF ;
 //
 void setup() 
 {
-  size(400, 300);
+  size(1000, 800);
   //fulScreen(); //displayWidth, displayHeight
   displayOrientation();
   appWidth = width;
